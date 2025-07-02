@@ -6,6 +6,15 @@ Please complete the relevant section(s) below.
 
 ---
 
+## 📝 Suggested PR Title
+
+> Format your PR title like one of the following:
+> - `lab: add nginx pod with securityContext`
+> - `reflection: week2 submission`
+> - `question: FluxCD error in apply`
+
+---
+
 ## ✍️ What is this PR for?
 
 - [ ] I’m updating or adding new lab work
