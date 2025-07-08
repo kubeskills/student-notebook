@@ -19,6 +19,7 @@ spec:
           image: nginx:latest
           ports:
             - containerPort: 80
+ # Add Security Context to the Pod           
           securityContext:
-            runAsNonRoot: true
-            allowPrivilegeEscalation: false
+            runAsNonRoot: true # Ensures the container runs as a non-root user
+            allowPrivilegeEscalation: false  # Prevents the container from gaining additional privileges
