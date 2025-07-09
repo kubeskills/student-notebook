@@ -1,4 +1,4 @@
-## question: Pod won't run due to runAsNonRoot error:
+## Question: Pod won't run due to runAsNonRoot error:
 
 While applying securityContext settings (`runAsNonRoot: true`), my pod failed with Error: container has runAsNonRoot and image will run as root
 
