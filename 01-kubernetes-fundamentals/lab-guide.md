@@ -8,7 +8,7 @@ In this lab, you'll deploy a simple NGINX web server as a **Pod** and a **Deploy
 
 By the end of this lab, you will:
 
-- Understand the difference between a Pod and a Deployment
+- Understand the difference between a [Pod](https://kubernetes.io/docs/concepts/workloads/pods/) and a [Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
 - Use `kubectl` to apply, inspect, and delete resources
 - Add a `securityContext` to enhance workload security
 - Commit your work and reflect in your learning notebook

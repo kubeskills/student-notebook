@@ -31,17 +31,34 @@ student-notebook/
 ├── 00-getting-started/
 │   └── lab-notes.md
 ├── 01-kubernetes-fundamentals/
+│   ├── lab-guide.md
+│   ├── nginx-deployment.yaml
 │   ├── nginx-pod.yaml
-│   └── lab-guide.md
+│   └── pod-example.yaml
 ├── 02-gitops/
-│   ├── fluxcd-installation.md
 │   └── lab-guide.md
 ├── 03-security/
-│   └── lab-guide.md
+│   ├── lab-guide.md
+│   ├── network-policy.yaml
+│   ├── pod-security-context.yaml
+│   └── secure-pod.yaml
+├── 04-services-ingress/
+│   ├── kind-config.yaml
+│   ├── lab-guide.md
+│   ├── web-ingress.yaml
+│   ├── web-pod.yaml
+│   └── web-service.yaml
+├── 05-stateful-deploy/
+│   ├── lab-guide.md
+│   ├── postgres-deployment.yaml
+│   ├── postgres-pvc.yaml
+│   └── postgres-svc.yaml
 ├── 99-reflections/
 │   ├── week1.md
 │   ├── week2.md
-│   └── week3.md
+│   ├── week3.md
+│   ├── week4.md
+│   └── week5.md
 ├── docs/
 │   └── index.md
 ├── mkdocs.yml
@@ -76,6 +93,25 @@ student-notebook/
 ## 🛡 License
 
 This repo is licensed under the [MIT License](LICENSE).
+
+
+---
+
+## 🔁 Keep Your Fork In-sync
+
+👉 [Add upstream remote, fetch and merge](updating-your-fork.md)
+
+
+---
+
+## 🤝 Want to Contribute?
+
+We welcome your reflections, labs, and questions.
+
+👉 [Read the Contribution Guide](CONTRIBUTING.md)
+
+Whether it's fixing a typo or adding a new tutorial, your contributions help everyone GROW. 🌱
+
 
 
 ---
