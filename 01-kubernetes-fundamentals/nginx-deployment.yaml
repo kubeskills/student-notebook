@@ -16,7 +16,11 @@ spec:
     spec:
       containers:
         - name: nginx
+<<<<<<< HEAD
           image: nginxinc/nginx-unprivileged
+=======
+          image: nginxinc/nginx-unprivileged:stable
+>>>>>>> d3eafd0aab8d1502d15552170abd13d1ba11deea
           ports:
             - containerPort: 80
  # Add Security Context to the Pod           

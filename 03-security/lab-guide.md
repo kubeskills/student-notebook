@@ -140,24 +140,7 @@ Tag [@KubeSkills](https://linkedin.com/company/kubeskills) if you'd like it resh
 
 ---
 
-## 🔁 Next Steps
+## 🔁 Next Step
 
-You’ve just explored core Kubernetes pod security concepts—great job! Now let’s take it further.
-
-### 🚀 Contribute to the GROW Community
-
-We want your ideas for what the next security-focused lab should be!
-
-- Have you tried something cool?
-- Hit a weird edge case?
-- Wondered what happens if…?
-
-### Submit your idea by opening a Pull Request with a draft of:
-- A week4.md reflection stub in 99-reflections/
-- A new folder or YAML under 03-security/
-- A few notes on what the lab would demonstrate
-
-📬 Or just email your idea to: notebooks@kubeskills.com
-
-
-### 🙌 When you share your work, you help other students grow too. Let’s build a safer Kubernetes community—one YAML at a time.
+Ready to add networking to your apps in Kubernetes?  
+👉 [Continue to Services and Ingress Labs](../04-services-ingress/lab-guide.md)
