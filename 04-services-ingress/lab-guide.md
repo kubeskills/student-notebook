@@ -130,4 +130,5 @@ Post a screenshot of `curl http://web.example.com` using:
 
 ## 🔁 Next Step
 
-Try adding a second app and route `/v2` to it using the same Ingress!
+Ready to work with state in Kubernetes?
+👉 Continue to [Deploying a Stateful Application that requires persistent Storage](../05-stateful-deploy/lab-guide.md)
