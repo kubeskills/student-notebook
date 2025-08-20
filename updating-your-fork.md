@@ -48,3 +48,7 @@ git merge --ff-only upstream/main
 ```bash
 git push origin main
 ```
+
+---
+
+Now your fork is synced and you’ll get all the latest labs, reflection templates, and MkDocs updates.
