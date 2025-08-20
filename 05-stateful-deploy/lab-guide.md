@@ -145,3 +145,8 @@ kubectl scale deployment postgres --replicas=2
 ```
 
 Hint: Stateful apps often need `StatefulSets`, not `Deployments`!
+
+## ⏩ Next Step
+
+Ready to customize your shell?
+👉 Continue to 
