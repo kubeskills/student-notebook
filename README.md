@@ -11,7 +11,7 @@ This is your personal portfolio to document everything you learn through Kuberne
 ## 🚀 Your First Tasks
 
 1. ✅ Fork this repository to your own GitHub account.
-2. ✅ Open `00-getting-started/lab-notes.md` and follow the instructions.
+2. ✅ Open [00-getting-started/lab-notes.md](00-getting-started/lab-notes.md) and follow the instructions.
 3. ✅ Complete the first lab in `01-kubernetes-fundamentals/`.
 4. ✅ Create a new reflection file in `99-reflections/week1.md`.
 5. ✅ Commit and push your changes to GitHub.
