@@ -149,4 +149,4 @@ Hint: Stateful apps often need `StatefulSets`, not `Deployments`!
 ## ⏩ Next Step
 
 Ready to customize your shell?
-👉 Continue to 
+👉 Continue to  [Playing your computer like an instrument](../06-playing-your-computer-as-an-instrument/lab-guide.md)
