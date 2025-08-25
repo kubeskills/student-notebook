@@ -60,8 +60,6 @@ student-notebook/
 └── README.md
 ```
 
-
-
 ---
 
 ## ✅ What You’ll Gain
@@ -76,11 +74,12 @@ student-notebook/
 ## 📣 Want to Share Your Work?
 
 - Add a badge to your repo:
+
 ```markdown
 ![GROW Portfolio](https://img.shields.io/badge/GROW-portfolio-blue)
 ```
 
-- Tag your posts with: `#KubeSkillsGROW` `#KubeSkills`  
+- Tag your posts with: `#KubeSkillsGROW` `#KubeSkills`
 - Email us your notebook to get featured: notebooks@kubeskills.com
 
 ---
@@ -89,13 +88,11 @@ student-notebook/
 
 This repo is licensed under the [MIT License](LICENSE).
 
-
 ---
 
 ## 🔁 Keep Your Fork In-sync
 
 👉 [Add upstream remote, fetch and merge](updating-your-fork.md)
-
 
 ---
 
@@ -106,8 +103,6 @@ We welcome your reflections, labs, and questions.
 👉 [Read the Contribution Guide](CONTRIBUTING.md)
 
 Whether it's fixing a typo or adding a new tutorial, your contributions help everyone GROW. 🌱
-
-
 
 ---
 
@@ -138,16 +133,19 @@ pip install mkdocs mkdocs-material
 ```bash
 mkdocs serve
 ```
+
 Then visit: http://localhost:8000
 
 ### ✅ Step 3: Enable GitHub Pages
 
 1. Go to Settings > Pages in your GitHub repo
 2. Under Source, select:
- - Branch: main
- - Folder: /docs
+
+- Branch: main
+- Folder: /docs
+
 3. Visit your new site at:
+
 ```
 https://<your-username>.github.io/student-notebook/
 ```
-

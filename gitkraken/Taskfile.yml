@@ -1,0 +1,437 @@
+version: '3'
+
+vars:
+  PROJECT_NAME: GitKraken CLI Tasks
+  DESCRIPTION: Comprehensive GitKraken CLI command tasks for all documented features
+
+tasks:
+  # Authentication & Setup
+  auth:login:
+    desc: "Authenticate with GitKraken platform"
+    cmds:
+    - gk auth login
+
+  auth:logout:
+    desc: "Logout from GitKraken platform"
+    cmds:
+    - gk auth logout
+
+  auth:status:
+    desc: "Check authentication status"
+    cmds:
+    - gk auth status
+
+  setup:info:
+    desc: "Display system configuration information"
+    cmds:
+    - gk setup
+
+  version:
+    desc: "Show GitKraken CLI version"
+    cmds:
+    - gk version
+
+  # AI Features
+  ai:commit:
+    desc: "Generate AI-powered commit message"
+    cmds:
+    - gk ai commit
+
+  ai:changelog:
+    desc: "Generate AI-powered changelog"
+    cmds:
+    - gk ai changelog
+
+  ai:explain:commit:
+    desc: "AI explanation of a specific commit"
+    cmds:
+    - gk ai explain commit {{.COMMIT_HASH}}
+    vars:
+      COMMIT_HASH: '{{.COMMIT_HASH | default "HEAD"}}'
+
+  ai:explain:branch:
+    desc: "AI explanation of branch changes"
+    cmds:
+    - gk ai explain branch {{.BRANCH_NAME}}
+    vars:
+      BRANCH_NAME: '{{.BRANCH_NAME | default "main"}}'
+
+  ai:pr:create:
+    desc: "Create AI-generated pull request"
+    cmds:
+    - gk ai pr create
+
+  ai:tokens:
+    desc: "Manage AI tokens"
+    cmds:
+    - gk ai tokens
+
+  # Graph Visualization
+  graph:
+    desc: "Display commit graph in current repository"
+    cmds:
+    - gk graph
+
+  graph:oneline:
+    desc: "Display commit graph in oneline format"
+    cmds:
+    - gk graph --oneline
+
+  graph:all:
+    desc: "Display commit graph for all branches"
+    cmds:
+    - gk graph --all
+
+  # Issue Management
+  issue:list:
+    desc: "List issues in current repository"
+    cmds:
+    - gk issue list
+
+  issue:assign:
+    desc: "Assign issue to user"
+    cmds:
+    - gk issue assign {{.ISSUE_NUMBER}} {{.ASSIGNEE}}
+    vars:
+      ISSUE_NUMBER: '{{.ISSUE_NUMBER | default "1"}}'
+      ASSIGNEE: '{{.ASSIGNEE | default "@me"}}'
+
+  # Organization Management
+  org:list:
+    desc: "List available organizations"
+    cmds:
+    - gk organization list
+
+  org:set:
+    desc: "Set current organization"
+    cmds:
+    - gk organization set {{.ORG_ID}}
+    vars:
+      ORG_ID: '{{.ORG_ID | default ""}}'
+
+  # Provider Management
+  provider:list:
+    desc: "List configured providers"
+    cmds:
+    - gk provider list
+
+  provider:add:
+    desc: "Add a new provider token"
+    cmds:
+    - gk provider add {{.PROVIDER_TYPE}}
+    vars:
+      PROVIDER_TYPE: '{{.PROVIDER_TYPE | default "github"}}'
+
+  provider:remove:
+    desc: "Remove a provider token"
+    cmds:
+    - gk provider remove {{.PROVIDER_TYPE}}
+    vars:
+      PROVIDER_TYPE: '{{.PROVIDER_TYPE | default "github"}}'
+
+  provider:set:
+    desc: "Set default provider"
+    cmds:
+    - gk provider set {{.PROVIDER_TYPE}}
+    vars:
+      PROVIDER_TYPE: '{{.PROVIDER_TYPE | default "github"}}'
+
+  # Workspace Management
+  workspace:list:
+    desc: "List all workspaces"
+    cmds:
+    - gk workspace list
+    aliases: [ ws:list ]
+
+  workspace:create:
+    desc: "Create a new workspace"
+    cmds:
+    - gk workspace create {{.WORKSPACE_NAME}}
+    vars:
+      WORKSPACE_NAME: '{{.WORKSPACE_NAME | default "new-workspace"}}'
+    aliases: [ ws:create ]
+
+  workspace:clone:
+    desc: "Clone repository to workspace"
+    cmds:
+    - gk workspace clone {{.REPO_URL}}
+    vars:
+      REPO_URL: '{{.REPO_URL | default ""}}'
+    aliases: [ ws:clone ]
+
+  workspace:delete:
+    desc: "Delete a workspace"
+    cmds:
+    - gk workspace delete {{.WORKSPACE_NAME}}
+    vars:
+      WORKSPACE_NAME: '{{.WORKSPACE_NAME | default ""}}'
+    aliases: [ ws:delete ]
+
+  workspace:info:
+    desc: "Show workspace information"
+    cmds:
+    - gk workspace info
+    aliases: [ ws:info ]
+
+  workspace:set:
+    desc: "Set current workspace"
+    cmds:
+    - gk workspace set {{.WORKSPACE_NAME}}
+    vars:
+      WORKSPACE_NAME: '{{.WORKSPACE_NAME | default ""}}'
+    aliases: [ ws:set ]
+
+  workspace:unset:
+    desc: "Unset current workspace"
+    cmds:
+    - gk workspace unset
+    aliases: [ ws:unset ]
+
+  workspace:update:
+    desc: "Update workspace"
+    cmds:
+    - gk workspace update
+    aliases: [ ws:update ]
+
+  workspace:refresh:
+    desc: "Refresh workspace data"
+    cmds:
+    - gk workspace refresh
+    aliases: [ ws:refresh ]
+
+  # Work Management (Issue/Branch Workflow)
+  work:list:
+    desc: "List current work items"
+    cmds:
+    - gk work list
+    aliases: [ w:list ]
+
+  work:start:
+    desc: "Start working on an issue"
+    cmds:
+    - gk work start {{.ISSUE_ID}}
+    vars:
+      ISSUE_ID: '{{.ISSUE_ID | default ""}}'
+    aliases: [ w:start ]
+
+  work:end:
+    desc: "End current work session"
+    cmds:
+    - gk work end
+    aliases: [ w:end ]
+
+  work:info:
+    desc: "Show current work information"
+    cmds:
+    - gk work info
+    aliases: [ w:info ]
+
+  work:add:
+    desc: "Add files to current work"
+    cmds:
+    - gk work add {{.FILES}}
+    vars:
+      FILES: '{{.FILES | default "."}}'
+    aliases: [ w:add ]
+
+  work:commit:
+    desc: "Commit current work"
+    cmds:
+    - gk work commit -m "{{.MESSAGE}}"
+    vars:
+      MESSAGE: '{{.MESSAGE | default "Work in progress"}}'
+    aliases: [ w:commit ]
+
+  work:push:
+    desc: "Push current work"
+    cmds:
+    - gk work push
+    aliases: [ w:push ]
+
+  work:set:
+    desc: "Set work item details"
+    cmds:
+    - gk work set {{.PROPERTY}} {{.VALUE}}
+    vars:
+      PROPERTY: '{{.PROPERTY | default ""}}'
+      VALUE: '{{.VALUE | default ""}}'
+    aliases: [ w:set ]
+
+  work:update:
+    desc: "Update work item"
+    cmds:
+    - gk work update
+    aliases: [ w:update ]
+
+  # Pull Request Management
+  work:pr:create:
+    desc: "Create pull request for current work"
+    cmds:
+    - gk work pr create
+    aliases: [ w:pr:create ]
+
+  work:pr:merge:
+    desc: "Merge pull request for current work"
+    cmds:
+    - gk work pr merge
+    aliases: [ w:pr:merge ]
+
+  # MCP (Model Context Protocol)
+  mcp:install:
+    desc: "Install MCP server"
+    cmds:
+    - gk mcp install
+
+  mcp:uninstall:
+    desc: "Uninstall MCP server"
+    cmds:
+    - gk mcp uninstall
+
+  mcp:start:
+    desc: "Start MCP server"
+    cmds:
+    - gk mcp
+
+  # Shell Completion
+  completion:bash:
+    desc: "Generate bash completion script"
+    cmds:
+    - gk completion bash
+
+  completion:zsh:
+    desc: "Generate zsh completion script"
+    cmds:
+    - gk completion zsh
+
+  completion:fish:
+    desc: "Generate fish completion script"
+    cmds:
+    - gk completion fish
+
+  completion:powershell:
+    desc: "Generate PowerShell completion script"
+    cmds:
+    - gk completion powershell
+
+  # Git Workflow Shortcuts
+  git:status:
+    desc: "Show git status"
+    cmds:
+    - git status --short
+
+  git:log:oneline:
+    desc: "Show git log in oneline format"
+    cmds:
+    - git log --oneline --graph --decorate -10
+
+  git:branches:
+    desc: "Show all branches"
+    cmds:
+    - git branch -a
+
+  git:remote:
+    desc: "Show remote repositories"
+    cmds:
+    - git remote -v
+
+  # Development Workflow Combinations
+  workflow:start:
+    desc: "Start development workflow (auth + workspace + work)"
+    cmds:
+    - task: auth:status
+    - task: workspace:info
+    - task: work:list
+
+  workflow:daily:
+    desc: "Daily workflow check"
+    cmds:
+    - task: git:status
+    - task: work:info
+    - task: graph
+
+  workflow:commit:
+    desc: "Enhanced commit workflow with AI"
+    cmds:
+    - task: git:status
+    - task: ai:commit
+
+  workflow:pr:
+    desc: "Pull request workflow"
+    cmds:
+    - task: work:push
+    - task: ai:pr:create
+
+  # Diagnostic Tasks
+  diagnostic:check:
+    desc: "Run comprehensive diagnostic check"
+    cmds:
+    - echo "=== GitKraken CLI Diagnostics ==="
+    - task: version
+    - task: auth:status
+    - task: setup:info
+    - task: provider:list
+    - task: workspace:info
+    - echo "=== Git Status ==="
+    - task: git:status
+    - task: git:remote
+
+  # Help and Documentation
+  help:
+    desc: "Show available tasks"
+    cmds:
+    - task --list
+
+  help:gk:
+    desc: "Show GitKraken CLI help"
+    cmds:
+    - gk --help
+
+  help:ai:
+    desc: "Show AI command help"
+    cmds:
+    - gk ai --help
+
+  help:work:
+    desc: "Show work command help"
+    cmds:
+    - gk work --help
+
+  help:workspace:
+    desc: "Show workspace command help"
+    cmds:
+    - gk workspace --help
+
+  # Demo Tasks
+  demo:setup:
+    desc: "Demo: Complete GitKraken CLI setup"
+    cmds:
+    - echo "🚀 Setting up GitKraken CLI demo environment..."
+    - task: auth:status
+    - task: version
+    - task: workspace:list
+    - echo "✅ Demo setup complete!"
+
+  demo:workflow:
+    desc: "Demo: Show typical development workflow"
+    cmds:
+    - echo "📋 Demonstrating GitKraken CLI workflow..."
+    - task: workflow:daily
+    - task: graph:oneline
+    - echo "✨ Workflow demo complete!"
+
+  # Advanced Features
+  advanced:explain:
+    desc: "Advanced: AI explain current changes"
+    cmds:
+    - gk ai explain commit HEAD
+    - gk graph --oneline -5
+
+  advanced:pr:workflow:
+    desc: "Advanced: Complete PR workflow"
+    cmds:
+    - task: work:add
+      vars:
+        FILES: "."
+    - task: ai:commit
+    - task: work:push
+    - task: ai:pr:create

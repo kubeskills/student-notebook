@@ -1,18 +1,21 @@
-# GitKraken CLI & GitLens: Supercharge Your Developer Workflow
+# GitKraken CLI & GitLens Developer Workflow Guide
 
-This guide covers how to leverage GitKraken CLI and GitLens to dramatically improve your Git workflow efficiency, with special focus on interactive rebasing and graph visualization.
+This comprehensive guide shows you how to leverage GitKraken CLI and GitLens to dramatically improve your Git workflow efficiency, with special focus on interactive rebasing and graph visualization.
 
-**Quick Navigation:**
+## What You'll Learn
 
-- Setup: [GitKraken CLI](#gitoleon-cli-setup) | [GitLens Extension](#gitlens-extension)
-- Core Features: [Interactive Rebase](#interactive-rebase-workflows) | [Gr---
+This documentation covers essential developer workflow optimizations:
 
-Happy coding! Views](#graph-views-visualization)
-- Advanced: [Workflows](#advanced-workflows) | [Best Practices](#best-practices)
+- **GitKraken CLI Setup** - Command-line Git power tools
+- **GitLens Extension** - VS Code Git integration and visualization  
+- **Interactive Rebase Mastery** - Clean up commit history like a pro
+- **Graph Visualization** - Understand complex branch relationships
+- **Advanced Workflows** - Real-world development scenarios
+- **Best Practices** - Pro tips for optimal Git workflows
 
 ---
 
-## 🛠️ GitKraken CLI Setup
+## GitKraken CLI Setup
 
 ### Installation
 
@@ -52,7 +55,7 @@ gk repo list
 
 ---
 
-## 🎨 GitLens Extension
+## GitLens Extension
 
 ### Installation in VS Code
 
@@ -70,7 +73,7 @@ gk repo list
 
 ---
 
-## 🔄 Interactive Rebase Workflows
+## Interactive Rebase Workflows
 
 ### GitKraken CLI Interactive Rebase
 
@@ -100,7 +103,6 @@ gk rebase -i main
 **Using GitLens in VS Code:**
 
 1. **Open Interactive Rebase View:**
-
    - Command Palette (`Cmd+Shift+P`)
    - Type "GitLens: Open Interactive Rebase Editor"
 
@@ -148,7 +150,7 @@ gk rebase -i HEAD~4
 
 ---
 
-## 📊 Graph Views & Visualization
+## Graph Views & Visualization
 
 ### GitKraken CLI Graph Commands
 
@@ -163,6 +165,16 @@ gk log --graph --pretty=format:"%h %ad %s" --date=short
 
 # Show all branches
 gk log --graph --all --oneline
+```
+
+**Branch visualization:**
+
+```bash
+# Show branch relationships
+gk branch --graph
+
+# Compare branches visually
+gk diff branch1..branch2 --stat
 ```
 
 ### GitLens Graph Features
@@ -202,7 +214,7 @@ gk log --graph --all --oneline
 
 ---
 
-## ⚡ Advanced Workflows
+## Advanced Workflows
 
 ### Feature Branch Workflow with GitKraken CLI
 
@@ -252,13 +264,11 @@ gk push
 **Finding the root cause of issues:**
 
 1. **Blame View:**
-
    - Right-click any line → "Toggle Line Blame"
    - See who changed what and when
    - Click commit hash for full details
 
 2. **File History:**
-
    - Command Palette → "GitLens: Show File History"
    - See all changes to current file
    - Compare different versions
@@ -269,7 +279,7 @@ gk push
 
 ---
 
-## 💡 Best Practices
+## Best Practices
 
 ### Interactive Rebase Best Practices
 
@@ -335,7 +345,7 @@ alias gkpu="gk push --set-upstream origin"
 
 ---
 
-## 🎯 Practical Examples
+## Practical Examples
 
 ### Scenario 1: Cleaning Up Feature Branch History
 
@@ -384,7 +394,7 @@ git bisect good <last-known-good-commit>
 
 ---
 
-## 🚀 Pro Tips
+## Pro Tips
 
 ### GitKraken CLI Power Commands
 
@@ -420,18 +430,18 @@ gk add -i
 
 ---
 
-## 📝 Summary
+## Summary
 
 By combining GitKraken CLI's powerful command-line tools with GitLens's rich VS Code integration, you can:
 
-- ⚡ **Speed up development** with efficient Git operations
-- 🔍 **Debug faster** using blame and history views
-- 🎨 **Visualize complex Git graphs** for better understanding
-- 🛠️ **Perform safe interactive rebases** with visual feedback
-- 🤝 **Collaborate better** with clear commit history
+- **Speed up development** with efficient Git operations
+- **Debug faster** using blame and history views
+- **Visualize complex Git graphs** for better understanding
+- **Perform safe interactive rebases** with visual feedback
+- **Collaborate better** with clean commit history
 
 The key is to use CLI for bulk operations and GitLens for detailed investigation and visualization. This combination provides both power and usability for modern Git workflows.
 
 ---
 
-_Happy coding! 🎉_
+Happy coding!
