@@ -1,3 +1,8 @@
+## 🌱 KubeSkills GROW Challenge
+
+[![GROW Portfolio](https://img.shields.io/badge/GROW-portfolio-blue)](https://github.com/felix-codexyz/student-notebook)
+
+
 # 📘 KubeSkills Student Notebook Template
 
 Welcome to your **KubeSkills GitHub Repository of Work (GROW)** 🪴.
