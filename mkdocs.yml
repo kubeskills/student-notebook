@@ -7,30 +7,35 @@ theme:
     accent: cyan
 
 nav:
-  - Home: index.md
-  - Getting Started:
-      - Lab Notes: 00-getting-started/lab-notes.md
-  - Kubernetes Fundamentals:
-      - NGINX Pod Lab: 01-kubernetes-fundamentals/lab-guide.md
-      - YAML: 01-kubernetes-fundamentals/nginx-pod.yaml
-  - GitOps:
-      - FluxCD Install: 02-gitops/fluxcd-installation.md
-      - Lab Guide: 02-gitops/lab-guide.md
-  - Security:
-      - Security Lab Guide: 03-security/lab-guide.md
-      - Example PSP: 03-security/podsecuritypolicy-example.yaml
-  - Reflections:
-      - Week 1: 99-reflections/week1.md
-      - Week 2: 99-reflections/week2.md
-      - Week 3: 99-reflections/week3.md
+- Home: index.md
+- Getting Started:
+  - Lab Notes: 00-getting-started/lab-notes.md
+- Kubernetes Fundamentals:
+  - NGINX Pod Lab: 01-kubernetes-fundamentals/lab-guide.md
+  - YAML: 01-kubernetes-fundamentals/nginx-pod.yaml
+- GitOps:
+  - FluxCD Install: 02-gitops/fluxcd-installation.md
+  - Lab Guide: 02-gitops/lab-guide.md
+- Security:
+  - Security Lab Guide: 03-security/lab-guide.md
+  - Example PSP: 03-security/podsecuritypolicy-example.yaml
+- GitKraken & GitLens:
+  - Overview: gitkraken/README.md
+  - Complete Workflow Guide: gitkraken/git-workflow-guide.md
+  - Developer Workflow: gitkraken/developer-workflow.md
+  - Taskfile Guide: gitkraken/taskfile-guide.md
+- Reflections:
+  - Week 1: 99-reflections/week1.md
+  - Week 2: 99-reflections/week2.md
+  - Week 3: 99-reflections/week3.md
 
 markdown_extensions:
-  - toc:
-      permalink: true
-  - admonition
-  - codehilite
-  - footnotes
-  - tables
+- toc:
+    permalink: true
+- admonition
+- codehilite
+- footnotes
+- tables
 
 repo_url: https://github.com/kubeskills/student-notebook
 edit_uri: edit/main/docs/
